@@ -343,8 +343,8 @@ img {
 }
 
 .customers-title {
-    margin-bottom: 72px;
-}
+    line-height: 1.1;
+    margin-bottom: 72px;}
 
 .customers-list {
     display: flex;
