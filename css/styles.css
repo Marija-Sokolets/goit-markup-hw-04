@@ -45,6 +45,7 @@ img {
     color: var(--color-cornflower);
     border-bottom: 1px solid var(--color-cornflower);
     padding: 24px 0;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .nav-container {
@@ -139,7 +140,7 @@ img {
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/people-office.jpg);
+    background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -294,7 +295,7 @@ img {
 }
 
 .employee {
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .position {
@@ -330,16 +331,19 @@ img {
     background-color: var(--color-ocean);
 }
 
-.socials-icon {}
+.socials-icon {
+    fill: var(--color-cloud);
+}
 
-/* Customers icons */
+/* Customers */
 
 .customers-section {
-    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .customers-title {
-    margin-top: 120px;
+    line-height: 1.1;
     margin-bottom: 72px;
 }
 
@@ -359,18 +363,20 @@ img {
     align-items: center;
     width: 168px;
     height: 88px;
-    fill: var(--color-light-slate);
+    color: var(--color-light-slate);
     border: 1px solid var(--color-light-slate);
     border-radius: 4px;
 }
 
 .customers-link:hover,
 .customers-link:focus {
-    fill: var(--color-ocean);
+    color: var(--color-ocean);
     border-color: var(--color-ocean);
 }
 
-.customers-icon {}
+.customers-icon {
+    fill: currentColor;
+}
 
 /* Filters */
 
@@ -407,8 +413,10 @@ img {
 .button-filter:focus {
     color: var(--color-white);
     background-color: var(--color-ocean);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
     border: 1px solid transparent;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-title {
@@ -437,8 +445,12 @@ img {
     width: calc((100% - 48px) / 3)
 }
 
-.filter-link:hover,
-.filter-link:focus {
+.filter-img-link {
+    display: block;
+}
+
+.filter-img-link:hover,
+.filter-img-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -459,6 +471,7 @@ img {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .logo-footer {
@@ -486,6 +499,7 @@ img {
 
 .social-subtitle {
     font-size: 16px;
+    line-height: 1.5;
     margin-bottom: 16px;
     color: var(--color-white);
 }
